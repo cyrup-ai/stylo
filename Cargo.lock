@@ -918,48 +918,10 @@ dependencies = [
  "phf 0.13.1",
  "phf_codegen",
  "precomputed-hash",
- "servo_arc 0.4.1 (git+https://github.com/cyrup-ai/stylo?branch=main)",
+ "servo_arc",
  "smallvec 2.0.0-alpha.11",
- "to_shmem 0.2.0 (git+https://github.com/cyrup-ai/stylo?branch=main)",
- "to_shmem_derive 0.1.0 (git+https://github.com/cyrup-ai/stylo?branch=main)",
-]
-
-[[package]]
-name = "selectors"
-version = "0.30.0"
-source = "git+https://github.com/cyrup-ai/stylo?branch=main#7882878764e8f88b22f82a3ba0dbae5847f480e9"
-dependencies = [
- "bitflags",
- "cssparser",
- "derive_more",
- "fxhash",
- "log",
- "new_debug_unreachable",
- "phf 0.13.1",
- "phf_codegen",
- "precomputed-hash",
- "servo_arc 0.4.1 (git+https://github.com/cyrup-ai/stylo)",
- "smallvec 2.0.0-alpha.11",
- "to_shmem 0.2.0 (git+https://github.com/cyrup-ai/stylo)",
- "to_shmem_derive 0.1.0 (git+https://github.com/cyrup-ai/stylo)",
-]
-
-[[package]]
-name = "selectors"
-version = "0.30.0"
-source = "git+https://github.com/cyrup-ai/stylo#7882878764e8f88b22f82a3ba0dbae5847f480e9"
-dependencies = [
- "bitflags",
- "cssparser",
- "derive_more",
- "fxhash",
- "log",
- "new_debug_unreachable",
- "phf 0.13.1",
- "phf_codegen",
- "precomputed-hash",
- "servo_arc 0.4.1 (git+https://github.com/cyrup-ai/stylo)",
- "smallvec 2.0.0-alpha.11",
+ "to_shmem",
+ "to_shmem_derive",
 ]
 
 [[package]]
@@ -1006,23 +968,6 @@ name = "servo_arc"
 version = "0.4.1"
 dependencies = [
  "serde",
- "stable_deref_trait",
-]
-
-[[package]]
-name = "servo_arc"
-version = "0.4.1"
-source = "git+https://github.com/cyrup-ai/stylo?branch=main#7882878764e8f88b22f82a3ba0dbae5847f480e9"
-dependencies = [
- "serde",
- "stable_deref_trait",
-]
-
-[[package]]
-name = "servo_arc"
-version = "0.4.1"
-source = "git+https://github.com/cyrup-ai/stylo#7882878764e8f88b22f82a3ba0dbae5847f480e9"
-dependencies = [
  "stable_deref_trait",
 ]
 
@@ -1127,23 +1072,23 @@ dependencies = [
  "rayon",
  "rayon-core",
  "regex",
- "selectors 0.30.0 (git+https://github.com/cyrup-ai/stylo?branch=main)",
+ "selectors",
  "serde",
- "servo_arc 0.4.1 (git+https://github.com/cyrup-ai/stylo?branch=main)",
+ "servo_arc",
  "smallbitvec",
  "smallvec 2.0.0-alpha.11",
  "static_assertions",
  "string_cache",
- "stylo_atoms 0.5.0 (git+https://github.com/cyrup-ai/stylo?branch=main)",
- "stylo_config 0.5.0 (git+https://github.com/cyrup-ai/stylo?branch=main)",
- "stylo_derive 0.5.0 (git+https://github.com/cyrup-ai/stylo?branch=main)",
- "stylo_dom 0.5.0 (git+https://github.com/cyrup-ai/stylo)",
- "stylo_malloc_size_of 0.5.0 (git+https://github.com/cyrup-ai/stylo)",
- "stylo_static_prefs 0.5.0 (git+https://github.com/cyrup-ai/stylo?branch=main)",
- "stylo_traits 0.5.0 (git+https://github.com/cyrup-ai/stylo?branch=main)",
+ "stylo_atoms",
+ "stylo_config",
+ "stylo_derive",
+ "stylo_dom",
+ "stylo_malloc_size_of",
+ "stylo_static_prefs",
+ "stylo_traits",
  "thin-vec",
- "to_shmem 0.2.0 (git+https://github.com/cyrup-ai/stylo?branch=main)",
- "to_shmem_derive 0.1.0 (git+https://github.com/cyrup-ai/stylo?branch=main)",
+ "to_shmem",
+ "to_shmem_derive",
  "toml",
  "uluru",
  "url",
@@ -1161,31 +1106,8 @@ dependencies = [
 ]
 
 [[package]]
-name = "stylo_atoms"
-version = "0.5.0"
-source = "git+https://github.com/cyrup-ai/stylo?branch=main#7882878764e8f88b22f82a3ba0dbae5847f480e9"
-dependencies = [
- "string_cache",
- "string_cache_codegen",
-]
-
-[[package]]
-name = "stylo_atoms"
-version = "0.5.0"
-source = "git+https://github.com/cyrup-ai/stylo#7882878764e8f88b22f82a3ba0dbae5847f480e9"
-dependencies = [
- "string_cache",
- "string_cache_codegen",
-]
-
-[[package]]
 name = "stylo_config"
 version = "0.5.0"
-
-[[package]]
-name = "stylo_config"
-version = "0.5.0"
-source = "git+https://github.com/cyrup-ai/stylo?branch=main#7882878764e8f88b22f82a3ba0dbae5847f480e9"
 
 [[package]]
 name = "stylo_derive"
@@ -1199,32 +1121,11 @@ dependencies = [
 ]
 
 [[package]]
-name = "stylo_derive"
-version = "0.5.0"
-source = "git+https://github.com/cyrup-ai/stylo?branch=main#7882878764e8f88b22f82a3ba0dbae5847f480e9"
-dependencies = [
- "darling",
- "proc-macro2",
- "quote",
- "syn",
- "synstructure",
-]
-
-[[package]]
 name = "stylo_dom"
 version = "0.5.0"
 dependencies = [
  "bitflags",
- "stylo_malloc_size_of 0.5.0 (git+https://github.com/cyrup-ai/stylo?branch=main)",
-]
-
-[[package]]
-name = "stylo_dom"
-version = "0.5.0"
-source = "git+https://github.com/cyrup-ai/stylo#7882878764e8f88b22f82a3ba0dbae5847f480e9"
-dependencies = [
- "bitflags",
- "stylo_malloc_size_of 0.5.0 (git+https://github.com/cyrup-ai/stylo)",
+ "stylo_malloc_size_of",
 ]
 
 [[package]]
@@ -1234,41 +1135,8 @@ dependencies = [
  "app_units",
  "cssparser",
  "euclid",
- "selectors 0.30.0 (git+https://github.com/cyrup-ai/stylo?branch=main)",
- "servo_arc 0.4.1 (git+https://github.com/cyrup-ai/stylo?branch=main)",
- "smallbitvec",
- "smallvec 2.0.0-alpha.11",
- "string_cache",
- "thin-vec",
- "void",
-]
-
-[[package]]
-name = "stylo_malloc_size_of"
-version = "0.5.0"
-source = "git+https://github.com/cyrup-ai/stylo?branch=main#7882878764e8f88b22f82a3ba0dbae5847f480e9"
-dependencies = [
- "app_units",
- "cssparser",
- "euclid",
- "selectors 0.30.0 (git+https://github.com/cyrup-ai/stylo)",
- "servo_arc 0.4.1 (git+https://github.com/cyrup-ai/stylo)",
- "smallbitvec",
- "smallvec 2.0.0-alpha.11",
- "thin-vec",
- "void",
-]
-
-[[package]]
-name = "stylo_malloc_size_of"
-version = "0.5.0"
-source = "git+https://github.com/cyrup-ai/stylo#7882878764e8f88b22f82a3ba0dbae5847f480e9"
-dependencies = [
- "app_units",
- "cssparser",
- "euclid",
- "selectors 0.30.0 (git+https://github.com/cyrup-ai/stylo)",
- "servo_arc 0.4.1 (git+https://github.com/cyrup-ai/stylo)",
+ "selectors",
+ "servo_arc",
  "smallbitvec",
  "smallvec 2.0.0-alpha.11",
  "string_cache",
@@ -1281,11 +1149,6 @@ name = "stylo_static_prefs"
 version = "0.5.0"
 
 [[package]]
-name = "stylo_static_prefs"
-version = "0.5.0"
-source = "git+https://github.com/cyrup-ai/stylo?branch=main#7882878764e8f88b22f82a3ba0dbae5847f480e9"
-
-[[package]]
 name = "stylo_traits"
 version = "0.5.0"
 dependencies = [
@@ -1294,35 +1157,14 @@ dependencies = [
  "cssparser",
  "euclid",
  "malloc_size_of_derive",
- "selectors 0.30.0 (git+https://github.com/cyrup-ai/stylo?branch=main)",
+ "selectors",
  "serde",
- "servo_arc 0.4.1 (git+https://github.com/cyrup-ai/stylo?branch=main)",
- "stylo_atoms 0.5.0 (git+https://github.com/cyrup-ai/stylo?branch=main)",
- "stylo_malloc_size_of 0.5.0 (git+https://github.com/cyrup-ai/stylo?branch=main)",
+ "servo_arc",
+ "stylo_atoms",
+ "stylo_malloc_size_of",
  "thin-vec",
- "to_shmem 0.2.0 (git+https://github.com/cyrup-ai/stylo?branch=main)",
- "to_shmem_derive 0.1.0 (git+https://github.com/cyrup-ai/stylo?branch=main)",
- "url",
-]
-
-[[package]]
-name = "stylo_traits"
-version = "0.5.0"
-source = "git+https://github.com/cyrup-ai/stylo?branch=main#7882878764e8f88b22f82a3ba0dbae5847f480e9"
-dependencies = [
- "app_units",
- "bitflags",
- "cssparser",
- "euclid",
- "malloc_size_of_derive",
- "selectors 0.30.0 (git+https://github.com/cyrup-ai/stylo)",
- "serde",
- "servo_arc 0.4.1 (git+https://github.com/cyrup-ai/stylo)",
- "stylo_atoms 0.5.0 (git+https://github.com/cyrup-ai/stylo)",
- "stylo_malloc_size_of 0.5.0 (git+https://github.com/cyrup-ai/stylo)",
- "thin-vec",
- "to_shmem 0.2.0 (git+https://github.com/cyrup-ai/stylo)",
- "to_shmem_derive 0.1.0 (git+https://github.com/cyrup-ai/stylo)",
+ "to_shmem",
+ "to_shmem_derive",
  "url",
 ]
 
@@ -1378,7 +1220,7 @@ name = "to_shmem"
 version = "0.2.0"
 dependencies = [
  "cssparser",
- "servo_arc 0.4.1 (git+https://github.com/cyrup-ai/stylo?branch=main)",
+ "servo_arc",
  "smallbitvec",
  "smallvec 2.0.0-alpha.11",
  "string_cache",
@@ -1386,53 +1228,8 @@ dependencies = [
 ]
 
 [[package]]
-name = "to_shmem"
-version = "0.2.0"
-source = "git+https://github.com/cyrup-ai/stylo?branch=main#7882878764e8f88b22f82a3ba0dbae5847f480e9"
-dependencies = [
- "cssparser",
- "servo_arc 0.4.1 (git+https://github.com/cyrup-ai/stylo)",
- "smallbitvec",
- "smallvec 2.0.0-alpha.11",
- "string_cache",
- "thin-vec",
-]
-
-[[package]]
-name = "to_shmem"
-version = "0.2.0"
-source = "git+https://github.com/cyrup-ai/stylo#7882878764e8f88b22f82a3ba0dbae5847f480e9"
-dependencies = [
- "servo_arc 0.4.1 (git+https://github.com/cyrup-ai/stylo)",
-]
-
-[[package]]
 name = "to_shmem_derive"
 version = "0.1.0"
-dependencies = [
- "darling",
- "proc-macro2",
- "quote",
- "syn",
- "synstructure",
-]
-
-[[package]]
-name = "to_shmem_derive"
-version = "0.1.0"
-source = "git+https://github.com/cyrup-ai/stylo?branch=main#7882878764e8f88b22f82a3ba0dbae5847f480e9"
-dependencies = [
- "darling",
- "proc-macro2",
- "quote",
- "syn",
- "synstructure",
-]
-
-[[package]]
-name = "to_shmem_derive"
-version = "0.1.0"
-source = "git+https://github.com/cyrup-ai/stylo#7882878764e8f88b22f82a3ba0dbae5847f480e9"
 dependencies = [
  "darling",
  "proc-macro2",

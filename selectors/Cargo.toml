@@ -38,21 +38,15 @@ version = "2.0.1"
 features = [ "add", "add_assign",]
 
 [dependencies.servo_arc]
-git = "https://github.com/cyrup-ai/stylo"
-branch = "main"
-package = "servo_arc"
+path = "../servo_arc"
 
 [dependencies.to_shmem]
-git = "https://github.com/cyrup-ai/stylo"
-branch = "main"
-package = "to_shmem"
+path = "../to_shmem"
 features = [ "servo_arc",]
 optional = true
 
 [dependencies.to_shmem_derive]
-git = "https://github.com/cyrup-ai/stylo"
-branch = "main"
-package = "to_shmem_derive"
+path = "../to_shmem_derive"
 optional = true
 
 

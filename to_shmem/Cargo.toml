@@ -27,9 +27,7 @@ version = "0.35.0"
 optional = true
 
 [dependencies.servo_arc]
-git = "https://github.com/cyrup-ai/stylo"
-branch = "main"
-package = "servo_arc"
+path = "../servo_arc"
 optional = true
 
 [dependencies.smallbitvec]

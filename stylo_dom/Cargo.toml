@@ -16,4 +16,4 @@ path = "lib.rs"
 
 [dependencies]
 bitflags = "2.9.4"
-malloc_size_of = { git = "https://github.com/cyrup-ai/stylo", branch = "main", package = "stylo_malloc_size_of" }
+malloc_size_of = { path = "../malloc_size_of", package = "stylo_malloc_size_of" }
