@@ -1,0 +1,58 @@
+[package]
+name = "selectors"
+version = "0.30.0"
+authors = [ "The Servo Project Developers",]
+documentation = "https://docs.rs/selectors/"
+description = "CSS Selectors matching for Rust"
+repository = "https://github.com/servo/stylo"
+readme = "README.md"
+keywords = [ "css", "selectors",]
+license = "MPL-2.0"
+edition = "2024"
+rust-version = "1.85.0"
+build = "build.rs"
+
+[lib]
+name = "selectors"
+path = "lib.rs"
+
+[features]
+bench = []
+to_shmem = [ "dep:to_shmem", "dep:to_shmem_derive",]
+
+[dependencies]
+bitflags = "2.9.4"
+cssparser = "0.35.0"
+fxhash = "0.2.1"
+log = "0.4.28"
+phf = "0.13.1"
+precomputed-hash = "0.1.1"
+smallvec = "2.0.0-alpha.11"
+new_debug_unreachable = "1.0.6"
+
+[build-dependencies]
+phf_codegen = "0.13.1"
+
+[dependencies.derive_more]
+version = "2.0.1"
+features = [ "add", "add_assign",]
+
+[dependencies.servo_arc]
+git = "https://github.com/cyrup-ai/stylo"
+branch = "main"
+package = "servo_arc"
+
+[dependencies.to_shmem]
+git = "https://github.com/cyrup-ai/stylo"
+branch = "main"
+package = "to_shmem"
+features = [ "servo_arc",]
+optional = true
+
+[dependencies.to_shmem_derive]
+git = "https://github.com/cyrup-ai/stylo"
+branch = "main"
+package = "to_shmem_derive"
+optional = true
+
+

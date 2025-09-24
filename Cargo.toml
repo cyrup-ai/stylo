@@ -1,0 +1,16 @@
+[workspace]
+members = [
+    "malloc_size_of",
+    "selectors", 
+    "servo_arc",
+    "style",
+    "style_derive",
+    "style_traits",
+    "stylo_atoms",
+    "stylo_config",
+    "stylo_dom",
+    "stylo_static_prefs",
+    "to_shmem",
+    "to_shmem_derive"
+]
+resolver = "2"

@@ -1,0 +1,176 @@
+[package]
+name = "stylo"
+version = "0.5.0"
+authors = [ "The Servo Project Developers",]
+license = "MPL-2.0"
+repository = "https://github.com/servo/stylo"
+edition = "2021"
+rust-version = "1.80"
+description = "The Stylo CSS engine"
+readme = "../README.md"
+build = "build.rs"
+links = "servo_style_crate"
+
+[lib]
+name = "style"
+path = "lib.rs"
+doctest = false
+
+[features]
+default = [ "servo",]
+gecko = [ "bindgen", "malloc_size_of/gecko", "regex", "serde", "style_traits/gecko", "toml", "selectors/to_shmem", "to_shmem/gecko",]
+servo = [ "cssparser/serde", "encoding_rs", "malloc_size_of/servo", "web_atoms", "mime", "serde", "servo_arc/servo", "stylo_atoms", "style_config", "string_cache", "style_traits/servo", "url", "selectors/to_shmem", "to_shmem/servo",]
+gecko_debug = []
+gecko_refcount_logging = []
+nsstring = []
+mozbuild = []
+
+[dependencies]
+app_units = "0.7.8"
+arrayvec = "0.7.6"
+atomic_refcell = "0.1.13"
+bitflags = "2.9.4"
+byteorder = "1.5.0"
+cssparser = "0.35.0"
+new_debug_unreachable = "1.0.6"
+euclid = "0.22.11"
+fxhash = "0.2.1"
+itertools = "0.14.0"
+itoa = "1.0.15"
+lazy_static = "1.5.0"
+log = "0.4.28"
+malloc_size_of_derive = "0.1.3"
+matches = "0.1.10"
+num-integer = "0.1.46"
+num-traits = "0.2.19"
+num-derive = "0.4.2"
+parking_lot = "0.12.4"
+precomputed-hash = "0.1.1"
+rayon = "1.11.0"
+rayon-core = "1.13.0"
+smallbitvec = "2.6.0"
+smallvec = "2.0.0-alpha.11"
+static_assertions = "1.1.0"
+thin-vec = { version = "0.2.14", default-features = false }
+uluru = "3.1.0"
+void = "1.0.2"
+
+[build-dependencies]
+lazy_static = "1.5.0"
+walkdir = "2.5.0"
+
+[dependencies.derive_more]
+version = "2.0.1"
+features = [ "add", "add_assign", "deref", "deref_mut", "from",]
+
+[dependencies.dom]
+version = "0.5"
+git = "https://github.com/cyrup-ai/stylo"
+package = "stylo_dom"
+
+[dependencies.encoding_rs]
+version = "0.8.35"
+optional = true
+
+[dependencies.icu_segmenter]
+version = "1.5.0"
+default-features = false
+features = [ "auto", "compiled_data",]
+
+[dependencies.indexmap]
+version = "2.11.4"
+features = [ "std",]
+
+[dependencies.malloc_size_of]
+version = "0.5"
+git = "https://github.com/cyrup-ai/stylo"
+package = "stylo_malloc_size_of"
+
+[dependencies.web_atoms]
+git = "https://github.com/cyrup-ai/html5ever"
+branch = "main"
+optional = true
+
+[dependencies.mime]
+version = "0.3.17"
+optional = true
+
+[dependencies.num_cpus]
+version = "1.17.0"
+
+[dependencies.selectors]
+git = "https://github.com/cyrup-ai/stylo"
+branch = "main"
+
+[dependencies.serde]
+version = "1.0.226"
+optional = true
+features = [ "derive",]
+
+[dependencies.servo_arc]
+git = "https://github.com/cyrup-ai/stylo"
+branch = "main"
+
+[dependencies.stylo_atoms]
+git = "https://github.com/cyrup-ai/stylo"
+branch = "main"
+optional = true
+
+[dependencies.static_prefs]
+git = "https://github.com/cyrup-ai/stylo"
+branch = "main"
+package = "stylo_static_prefs"
+
+[dependencies.string_cache]
+version = "0.9.0"
+optional = true
+
+[dependencies.style_config]
+git = "https://github.com/cyrup-ai/stylo"
+branch = "main"
+package = "stylo_config"
+optional = true
+
+[dependencies.style_derive]
+git = "https://github.com/cyrup-ai/stylo"
+branch = "main"
+package = "stylo_derive"
+
+[dependencies.style_traits]
+git = "https://github.com/cyrup-ai/stylo"
+branch = "main"
+package = "stylo_traits"
+
+[dependencies.to_shmem]
+git = "https://github.com/cyrup-ai/stylo"
+branch = "main"
+
+[dependencies.to_shmem_derive]
+git = "https://github.com/cyrup-ai/stylo"
+branch = "main"
+
+[dependencies.url]
+version = "2.5.7"
+optional = true
+features = [ "serde",]
+
+[build-dependencies.log]
+version = "0.4.28"
+features = [ "std",]
+
+[build-dependencies.bindgen]
+version = "0.72.1"
+optional = true
+default-features = false
+
+[build-dependencies.regex]
+version = "1.11.2"
+optional = true
+default-features = false
+features = [ "perf", "std",]
+
+[build-dependencies.toml]
+version = "0.9.7"
+optional = true
+default-features = false
+features = [ "serde", "parse",]
